@@ -31,6 +31,12 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "8f1844cc-d9af-44f0-b1b3-17be5afbbb52"
+      }
+    },
+    "owner": "ramprog"
   }
 }
