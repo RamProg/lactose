@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { FlatList, View } from "react-native";
 import Habit from "./Habit";
 
 interface Habit {
@@ -8,10 +8,13 @@ interface Habit {
 
 export default function HabitList({ habits }: { habits: Habit[] }) {
   return (
-    <View className="flex-1 p-4">
-      {habits.map((habit) => {
-        return <Habit key={habit.id} habit={habit} />;
-      })}
+    <View className="flex-1">
+      <FlatList
+        data={habits}
+        renderItem={({ item }) => <Habit habit={item} />}
+        keyExtractor={(item) => item.id}
+        contentContainerStyle={{ padding: 16 }}
+      />
     </View>
   );
 }

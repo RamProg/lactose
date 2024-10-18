@@ -12,6 +12,7 @@ module.exports = {
         defaultText: '#3B3B3B',
         positiveBackground: '#D7FDCD',
         negativeBackground: '#FBE2E4',
+        elementBackground: '#B9FFFB',
       },
     },
   },

@@ -1,9 +1,9 @@
 import { Slot, SplashScreen } from "expo-router";
-import { Text, View } from "react-native";
 import { useEffect } from "react";
 import { useFonts } from "expo-font";
 import { NativeWindStyleSheet } from "nativewind";
 import { SafeAreaView } from "react-native-safe-area-context";
+import Header from "@/components/Header"
 
 SplashScreen.preventAutoHideAsync();
 
@@ -27,9 +27,8 @@ export default function HomeLayout() {
 
   return (
     <SafeAreaView className="flex-1 bg-background">
-      <Text className="text-4xl text-center text-defaultText">Today</Text>
+      <Header />
       <Slot />
-      <Text className="text-defaultText">Footer</Text>
     </SafeAreaView>
   );
 }

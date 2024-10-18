@@ -1,14 +1,20 @@
 import Today from "@/screens/Today";
-import type { Habit } from "@/types/habits";
-
-const habits: Habit[] = [
-  { id: "1", name: "Drink 8 glasses of water" },
-  { id: "2", name: "Exercise for 30 minutes" },
-  { id: "3", name: "Meditate for 10 minutes" },
-];
+import useHabits from "@/hooks/useHabits";
+import { useEffect } from "react";
+import { useState } from "react";
 
 export default function Page() {
-  return (
-    <Today habits={habits} />
-  );
+  const [habits, setHabits] = useState([]);
+  const { getHabits } = useHabits();
+
+  useEffect(() => {
+    const fetchHabits = async () => {
+      const fetchedHabits = await getHabits();
+      setHabits(fetchedHabits);
+    };
+
+    fetchHabits();
+  }, [getHabits]);
+
+  return <Today habits={habits} />;
 }
