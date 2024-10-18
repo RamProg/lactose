@@ -8,5 +8,15 @@
         "image": "latest"
       }
     }
+  },
+  "submit": {
+    "production": {
+      "android": {
+        "image": "latest"
+      },
+      "ios": {
+        "image": "latest"
+      }
+    }
   }
 }
