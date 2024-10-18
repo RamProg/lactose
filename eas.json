@@ -1,22 +1,16 @@
 {
   "build": {
     "production": {
+      "workflow": "managed",
       "android": {
-        "image": "latest"
+        "image": "default"
       },
       "ios": {
-        "image": "latest"
+        "image": "default"
       }
     }
   },
   "submit": {
-    "production": {
-      "android": {
-        "image": "latest"
-      },
-      "ios": {
-        "image": "latest"
-      }
-    }
+    "production": {}
   }
 }
