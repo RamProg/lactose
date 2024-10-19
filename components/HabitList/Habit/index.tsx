@@ -33,6 +33,8 @@ export default function Habit({ habit }: { habit: Habit }) {
         value={isDone}
         onValueChange={switchToTrue}
         disabled={isDone}
+        thumbColor={isDone ? "#98FF98" : undefined}
+        trackColor={{ true: "#8A9A5B" }}
       />
     </View>
   );

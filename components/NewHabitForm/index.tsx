@@ -28,9 +28,10 @@ export default function NewHabitForm() {
       <TextInput
         className="p-4 mb-6 bg-white border rounded-lg border-defaultText text-text"
         placeholder="Enter habit name"
-        placeholderTextColor="#9CA3AF"
         value={habitName}
+        autoFocus={true}
         onChangeText={setHabitName}
+        onSubmitEditing={handleCreateHabit}
       />
 
       <View className="flex flex-row justify-between mx-4">
